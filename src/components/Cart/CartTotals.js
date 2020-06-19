@@ -1,19 +1,19 @@
 import React, { Component } from "react";
-import PayPalButton from "./PayPalButton.js";
+import PayPalButton from "./PayPalButton";
 import { Link } from "react-router-dom";
 export default class CartTotals extends Component {
-    render() {
-        const {
-            cartSubTotal,
-            cartTax,
-            cartTotal,
-            cart,
-            clearCart
-        } = this.props.value;
-        const { history } = this.props;
-        const emptyCart = cart.length === 0 ? true : false;
-        return (
-            <React.Fragment>
+  render() {
+    const {
+      cartSubTotal,
+      cartTax,
+      cartTotal,
+      cart,
+      clearCart
+    } = this.props.value;
+    const { history } = this.props;
+    const emptyCart = cart.length === 0 ? true : false;
+    return (
+      <React.Fragment>
         {!emptyCart && (
           <div className="container">
             <div className="row">
@@ -51,6 +51,6 @@ export default class CartTotals extends Component {
           </div>
         )}
       </React.Fragment>
-        );
-    }
+    );
+  }
 }
